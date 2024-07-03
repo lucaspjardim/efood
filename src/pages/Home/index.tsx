@@ -11,7 +11,7 @@ const Promoções: Game[] = [
     title: 'Hioki Sushi',
     description: `Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. \n
         Experimente o Japão sem sair do lar com nosso delivery!`,
-    infos: ['Italiana'],
+    infos: ['Japonesa'],
     image: imagem,
     rating: 4.5
   },
@@ -19,7 +19,7 @@ const Promoções: Game[] = [
     id: 2,
     title: 'La Dolce Vita Trattoria',
     description: `A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!`,
-    infos: ['Destaque da semana', 'Japonesa'],
+    infos: ['Destaque da semana', 'Italiana'],
     image: imagem1,
     rating: 4.7
   },
@@ -28,7 +28,7 @@ const Promoções: Game[] = [
     title: 'Hioki Sushi',
     description: `Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. \n
         Experimente o Japão sem sair do lar com nosso delivery!`,
-    infos: ['Italiana'],
+    infos: ['Japonesa'],
     image: imagem,
     rating: 4.5
   },
@@ -36,7 +36,7 @@ const Promoções: Game[] = [
     id: 2,
     title: 'La Dolce Vita Trattoria',
     description: `A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!`,
-    infos: ['Destaque da semana', 'Japonesa'],
+    infos: ['Destaque da semana', 'Italiana'],
     image: imagem1,
     rating: 4.7
   }
