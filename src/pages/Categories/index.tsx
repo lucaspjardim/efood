@@ -1,69 +1,73 @@
-import sushi from '../../assets/sushi.png'
-import italino from '../../assets/italiano.png'
+import ProductList from '../../components/ProductList'
+import Game from '../../models/Game'
 
-import Restaurants from '../../models/Restaurants'
+import { Imagem } from '../../components/Banner/styles'
 
-const restaurantsList Restaurants[] = [
+import apresentacao from '../../assets/images/apresentacao.png'
+import imagem2 from '../../assets/images/imagem2.png'
+import Header from '../../components/Header'
+
+const Produtos: Game[] = [
   {
     id: 1,
-    favorite: true,
-    type: 'Japonesa',
-    image: sushi,
-    title: 'Hioki Sushi',
-    note: 4.9,
-    description: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Experimente o Japão sem sair do lar com nosso delivery!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['25%', 'R$126,75'],
+    image: imagem2,
+    rating: 4.5
   },
   {
     id: 2,
-    favorite: false,
-    type: 'Italiana',
-    image: italino,
-    title: 'La Dolce Vita Trattoria',
-    note: 4.6,
-    description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['50%', 'R$174,95'],
+    image: imagem2,
+    rating: 4.7
   },
   {
     id: 3,
-    favorite: false,
-    type: 'Italiana',
-    image: italino,
-    title: 'La Dolce Vita Trattoria',
-    note: 4.6,
-    description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['25%', 'R$126,75'],
+    image: imagem2,
+    rating: 4.5
   },
   {
     id: 4,
-    favorite: false,
-    type: 'Italiana',
-    image: italino,
-    title: 'La Dolce Vita Trattoria',
-    note: 4.6,
-    description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['50%', 'R$174,95'],
+    image: imagem2,
+    rating: 4.7
   },
   {
     id: 5,
-    favorite: false,
-    type: 'Italiana',
-    image: italino,
-    title: 'La Dolce Vita Trattoria',
-    note: 4.6,
-    description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['50%', 'R$174,95'],
+    image: imagem2,
+    rating: 4.7
   },
   {
     id: 6,
-    favorite: false,
-    type: 'Italiana',
-    image: italino,
-    title: 'La Dolce Vita Trattoria',
-    note: 4.6,
-    description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!'
+    title: 'Pizza Marguerita',
+    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
+    infos: ['50%', 'R$174,95'],
+    image: imagem2,
+    rating: 4.7
   }
 ]
 
-const Categories = () => (
+export const Categories = () => (
   <>
-
+    <Header />
+    <Imagem
+      style={{
+        backgroundImage: `url(${apresentacao})`
+      }}
+    />
+    <div className="container">
+      <ProductList page="perfil" title="" games={Produtos} />
+    </div>
   </>
 )
-
-export default restaurantsList

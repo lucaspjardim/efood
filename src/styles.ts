@@ -1,20 +1,13 @@
-import styled, { createGlobalStyle } from 'styled-components'
-import logo from './assets/logo.svg'
+import { createGlobalStyle } from 'styled-components'
 
-export const Colors = {
-  salmon: '#E66767',
-  white: '#eee',
-  background: '#FFF8F2'
+export const Cores = {
+  salmao: '#E66767',
+  bege: '#FFF8F2',
+  branco: '#FFFFFF',
+  rosa: '#FFEBD9'
 }
 
-export const Logo = styled.img`
-  margin: 0 auto;
-  width: 125px;
-  height: 58px;
-  background-image: url(${logo});
-`
-
-export const GlobalCss = createGlobalStyle`
+export const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
@@ -22,15 +15,13 @@ export const GlobalCss = createGlobalStyle`
     font-family: Roboto, sans-serif;
     list-style: none;
   }
-
   body {
-    background-color: ${Colors.background};
-    color: ${Colors.salmon};
+    background-color: ${Cores.bege};
+    color: ${Cores.salmao};
   }
-
   .container {
+    max-width: 1024px;
     width: 100%;
     margin: 0 auto;
   }
-
 `
