@@ -1,4 +1,4 @@
-import Plate from '../Plate'
+import Plate from '../Menu'
 import { PlatesListContainer } from './styles'
 
 const PlatesList = () => (

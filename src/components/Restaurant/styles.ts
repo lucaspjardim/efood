@@ -65,7 +65,7 @@ export const Button = styled(Link)`
   margin-left: 8px;
   margin-top: 8px;
 
-  color: ${Cores.branco};
+  color: ${Cores.rosa};
   background-color: ${Cores.salmao};
 `
 
@@ -89,6 +89,6 @@ export const Tag = styled.span`
   font-weight: 700;
   font-size: 12px;
 
-  color: ${Cores.branco};
+  color: ${Cores.rosa};
   background-color: ${Cores.salmao};
 `

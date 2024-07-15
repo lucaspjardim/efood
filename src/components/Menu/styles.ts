@@ -12,7 +12,7 @@ export const Container = styled.div`
   height: 338px;
 
   background-color: ${Cores.salmao};
-  color: ${Cores.bege};
+  color: ${Cores.rosa};
 
   h2 {
     font-size: 16px;
@@ -35,5 +35,5 @@ export const Button = styled.button`
   height: 24px;
 
   color: ${Cores.salmao};
-  background-color: ${Cores.bege};
+  background-color: ${Cores.rosa};
 `

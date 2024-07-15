@@ -1,6 +1,6 @@
 import Header from '../../components/Header'
-import PlatesList from '../../components/PlatesList'
-import Presentation from '../../components/Presentation'
+import PlatesList from '../../components/MenuList'
+import Presentation from '../../components/RestaurantName'
 import { Restaurants } from '../Home'
 
 import VitaTrattoria from '../../assets/images/italian_restaurant.png'
