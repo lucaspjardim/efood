@@ -1,25 +1,27 @@
 import styled from 'styled-components'
+import fundo from '../../assets/images/fundo.png'
+import { Cores } from '../../styles'
 
-export const Imagem = styled.div`
-  width: 100%;
-  height: 280px;
-  display: block;
-  background-repeat: no-repeat;
+export const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 384px;
+  margin-bottom: 80px;
+
+  background-image: url(${fundo});
   background-size: cover;
-  font-weight: bold;
-
-  .container {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    padding: 40px 0;
-  }
 `
 
-export const Titulo = styled.h2`
+export const H1 = styled.h1`
+  text-align: center;
+
+  font-weight: 900;
+  width: 539px;
+  height: 84px;
   font-size: 36px;
-  max-width: 540px;
+
+  color: ${Cores.salmao};
 `

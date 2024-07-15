@@ -1,73 +1,20 @@
-import ProductList from '../../components/ProductList'
-import Game from '../../models/Game'
-
-import { Imagem } from '../../components/Banner/styles'
-
-import apresentacao from '../../assets/images/apresentacao.png'
-import imagem2 from '../../assets/images/imagem2.png'
 import Header from '../../components/Header'
+import PlatesList from '../../components/PlatesList'
+import Presentation from '../../components/Presentation'
+import { Restaurants } from '../Home'
 
-const Produtos: Game[] = [
-  {
-    id: 1,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['25%', 'R$126,75'],
-    image: imagem2,
-    rating: 4.5
-  },
-  {
-    id: 2,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['50%', 'R$174,95'],
-    image: imagem2,
-    rating: 4.7
-  },
-  {
-    id: 3,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['25%', 'R$126,75'],
-    image: imagem2,
-    rating: 4.5
-  },
-  {
-    id: 4,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['50%', 'R$174,95'],
-    image: imagem2,
-    rating: 4.7
-  },
-  {
-    id: 5,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['50%', 'R$174,95'],
-    image: imagem2,
-    rating: 4.7
-  },
-  {
-    id: 6,
-    title: 'Pizza Marguerita',
-    description: `A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!`,
-    infos: ['50%', 'R$174,95'],
-    image: imagem2,
-    rating: 4.7
-  }
-]
+import VitaTrattoria from '../../assets/images/italian_restaurant.png'
 
-export const Categories = () => (
+const LaDolceVita = () => (
   <>
     <Header />
-    <Imagem
-      style={{
-        backgroundImage: `url(${apresentacao})`
-      }}
+    <Presentation
+      category={Restaurants[4].category}
+      name={Restaurants[4].name}
+      image={VitaTrattoria}
     />
-    <div className="container">
-      <ProductList page="perfil" title="" games={Produtos} />
-    </div>
+    <PlatesList />
   </>
 )
+
+export default LaDolceVita

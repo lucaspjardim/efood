@@ -1,41 +1,40 @@
-import { Container, FooterSection, Link, Links } from './styles'
+import * as S from './styles'
 
-import logo from '../../assets/images/logo.png'
-
-import facebook from '../../assets/icons/facebook.png'
-import twitter from '../../assets/icons/twitter.png'
-import instagram from '../../assets/icons/instagram.png'
+import logo from '../../assets/images//logo.svg'
+import instagram from '../../assets/images/instagram.png'
+import facebook from '../../assets/images/facebook.png'
+import twitter from '../../assets/images/twitter.png'
 
 const Footer = () => (
-  <Container>
-    <div className="container">
-      <FooterSection>
-        <img src={logo} alt="E-FOOD logo" />
-        <Links>
-          <li>
-            <Link>
-              <img src={facebook} alt="Visite nosso Facebook" />
-            </Link>
-          </li>
-          <li>
-            <Link>
-              <img src={twitter} alt="Visite nosso Twitter" />
-            </Link>
-          </li>
-          <li>
-            <Link>
-              <img src={instagram} alt="Visite nosso Instagram" />
-            </Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <p>
-        A efood é uma plataforma para divulgação de estabelecimentos, a
-        responsabilidade pela entrega, qualidade dos produtos é toda do
-        estabelecimento contratado.
-      </p>
-    </div>
-  </Container>
+  <S.Container>
+    <S.Div>
+      <img src={logo} alt="Efood Logo" />
+
+      <ul>
+        <li>
+          <a href="#">
+            <img src={instagram} alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={facebook} alt="Facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src={twitter} alt="Twitter" />
+          </a>
+        </li>
+      </ul>
+    </S.Div>
+
+    <S.Copy>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.
+    </S.Copy>
+  </S.Container>
 )
 
 export default Footer

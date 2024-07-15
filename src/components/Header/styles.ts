@@ -1,25 +1,23 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import fundo from '../../assets/images/fundo.png'
 import { Cores } from '../../styles'
 
-export const HeaderBar = styled.header`
-  background-color: ${Cores.rosa};
-  padding: 24px 174px;
+export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-`
-export const LinkCart = styled.a`
-  display: flex;
-  text-decoration: none;
-  font-weight: bold;
-  size: 18px;
+  justify-content: space-around;
+
+  height: 166px;
+  font-size: 18px;
+  font-weight: 900;
+
+  background-image: url(${fundo});
+  background-size: cover;
   color: ${Cores.salmao};
-  img {
-    margin-left: 16px;
-  }
 `
-export const Title = styled.h3`
-  font-size: 16px;
-  font-weight: bold;
+
+export const TextLink = styled(Link)`
+  text-decoration: none;
+  color: ${Cores.salmao};
 `

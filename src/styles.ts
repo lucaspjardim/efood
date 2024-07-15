@@ -14,10 +14,10 @@ export const EstiloGlobal = createGlobalStyle`
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
     list-style: none;
+    text-decoration: none;
   }
   body {
     background-color: ${Cores.bege};
-    color: ${Cores.salmao};
   }
   .container {
     max-width: 1024px;

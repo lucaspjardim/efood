@@ -1,32 +1,38 @@
 import styled from 'styled-components'
 import { Cores } from '../../styles'
 
-export const Container = styled.footer`
-  background-color: ${Cores.rosa};
-  padding: 32px 0;
-  font-size: 14px;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 
-  .container {
+  height: 298px;
+
+  background-color: ${Cores.rosa};
+
+  margin-top: 120px;
+`
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 18px;
+
+  ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    p {
-      max-width: 720px;
-      text-align: center;
-    }
+    gap: 8px;
   }
 `
-export const Links = styled.ul`
-  display: flex;
-  margin-top: 32px;
-  justify-content: center;
-`
-export const Link = styled.a`
-  text-decoration: none;
-  margin-right: 8px;
-`
 
-export const FooterSection = styled.div`
-  margin-bottom: 64px;
+export const Copy = styled.p`
+  text-align: center;
+
+  font-size: 10px;
+  font-weight: 400;
+  width: 480px;
+
+  color: ${Cores.salmao};
 `
