@@ -6,12 +6,11 @@ import { Cores } from '../../styles'
 export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-
+  justify-content: space-between;
+  padding: 0px 200px;
   height: 166px;
   font-size: 18px;
   font-weight: 900;
-
   background-image: url(${fundo});
   background-size: cover;
   color: ${Cores.salmao};
