@@ -3,13 +3,13 @@ import * as S from './styles'
 import Estrela from '../../assets/images/estrela.png'
 
 type Props = {
+  id: number
   imagem: string
   nome: string
-  nota: string
+  nota: number
   info: string
-  destaque?: boolean
+  destaque: boolean
   categoria: string
-  link: string
 }
 
 const Restaurant = ({
@@ -19,25 +19,35 @@ const Restaurant = ({
   imagem,
   nota,
   info,
-  link
-}: Props) => (
-  <S.Container>
-    <S.Imagem src={imagem} alt={nome} />
-    <S.Title>
-      <h2>{nome}</h2>
-      <span>
-        {nota}
-        <img src={Estrela} alt="Nota do restaurante" />
-      </span>
-    </S.Title>
-    <S.Info>{info}</S.Info>
-    <S.Button to={link}>Saiba mais</S.Button>
+  id
+}: Props) => {
+  const retornaInfoRestaurante = (info: string) => {
+    if (info.length > 183) {
+      return info.slice(0, 180) + '...'
+    }
 
-    <S.TagContainer destaque={destaque}>
-      {destaque ? <S.Tag>Destaque da semana</S.Tag> : ''}
-      <S.Tag>{categoria}</S.Tag>
-    </S.TagContainer>
-  </S.Container>
-)
+    return info
+  }
+
+  return (
+    <S.Container>
+      <S.Imagem src={imagem} alt={nome} />
+      <S.Title>
+        <h2>{nome}</h2>
+        <span>
+          {nota}
+          <img src={Estrela} alt="Nota do restaurante" />
+        </span>
+      </S.Title>
+      <S.Info>{retornaInfoRestaurante(info)}</S.Info>
+      <S.Button to={`/restaurant/${id}`}>Saiba mais</S.Button>
+
+      <S.TagContainer destaque={destaque}>
+        {destaque ? <S.Tag>Destaque da semana</S.Tag> : ''}
+        <S.Tag>{categoria}</S.Tag>
+      </S.TagContainer>
+    </S.Container>
+  )
+}
 
 export default Restaurant

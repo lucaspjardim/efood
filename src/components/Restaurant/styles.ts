@@ -65,7 +65,7 @@ export const Button = styled(Link)`
   margin-left: 8px;
   margin-top: 8px;
 
-  color: ${Cores.rosa};
+  color: ${Cores.branco};
   background-color: ${Cores.salmao};
 `
 
@@ -74,7 +74,7 @@ export const TagContainer = styled.div<Props>`
   position: absolute;
 
   top: 16px;
-  left: ${(props) => (props.destaque ? '230px' : '390px')};
+  left: ${(props) => (props.destaque ? '230px' : '380px')};
   gap: 8px;
 `
 
@@ -89,6 +89,6 @@ export const Tag = styled.span`
   font-weight: 700;
   font-size: 12px;
 
-  color: ${Cores.rosa};
+  color: ${Cores.branco};
   background-color: ${Cores.salmao};
 `
