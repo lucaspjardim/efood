@@ -13,8 +13,10 @@ export const ItalianBanner = styled.div<Props>`
   font-weight: 900;
   background-image: url(${(props) => props.imagem});
   background-size: cover;
+  background-position: center; /* Ajustado para centralizar a imagem */
 
-  .overlay {
+  &::after {
+    content: ''; /* Adicionado para garantir a renderização do pseudo-elemento */
     position: absolute; /* Adicionado para garantir que a overlay cubra o banner */
     top: 0;
     left: 0;
@@ -33,6 +35,7 @@ export const ItalianBanner = styled.div<Props>`
     justify-content: space-between;
     text-align: start;
     height: 100%;
+    padding: 20px; /* Adicionado para espaçamento interno */
     color: ${Cores.branco};
   }
 

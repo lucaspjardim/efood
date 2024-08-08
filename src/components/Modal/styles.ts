@@ -10,6 +10,7 @@ export const Modal = styled.div`
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 
   &.visible {
     display: flex;

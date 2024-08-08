@@ -8,7 +8,6 @@ type Props = {
 
 const Presentation = ({ categoria, nome, imagem }: Props) => (
   <ItalianBanner imagem={imagem}>
-    <div className="overlay"></div>
     <div className="container">
       <span>{categoria}</span>
       <h1>{nome}</h1>
