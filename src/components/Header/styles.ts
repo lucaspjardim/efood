@@ -1,29 +1,38 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import fundo from '../../assets/images/fundo.png'
-import { Cores } from '../../styles'
+import { breakpoints, Cores } from '../../styles'
 
-export const HeaderContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+
   height: 166px;
   font-size: 18px;
   font-weight: 900;
+
   background-image: url(${fundo});
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: ${Cores.salmao};
-  width: 100%;
-`
 
-export const TextContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1024px;
+  @media (max-width: ${breakpoints.desktop}) {
+    padding: 24px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: ${breakpoints.tablet}) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  p {
+    cursor: pointer;
+  }
 `
 
 export const TextLink = styled(Link)`

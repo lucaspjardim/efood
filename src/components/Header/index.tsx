@@ -1,17 +1,29 @@
 import { Link } from 'react-router-dom'
 import logo from '../../assets/images/logo.svg'
-import { TextContainer, HeaderContainer, TextLink } from './styles'
+import * as S from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootReducer } from '../../store'
+import { open } from '../../store/reducers/cart'
 
-const Header = () => (
-  <HeaderContainer>
-    <TextContainer>
-      <TextLink to="/">Restaurantes</TextLink>
-      <Link to="/" style={{ margin: '0 auto' }}>
-        <img src={logo} alt="Efood Logo" />
-      </Link>
-      <p>0 produto(s) no carrinho</p>
-    </TextContainer>
-  </HeaderContainer>
-)
+const Header = () => {
+  const { items } = useSelector((state: RootReducer) => state.cart)
+  const dispatch = useDispatch()
+
+  const abrirCarrinho = () => {
+    dispatch(open())
+  }
+
+  return (
+    <S.Container>
+      <div className="container">
+        <S.TextLink to="/">Restaurantes</S.TextLink>
+        <Link to="/">
+          <img src={logo} alt="Efood Logo" />
+        </Link>
+        <p onClick={abrirCarrinho}>{items.length} produto(s) no carrinho</p>
+      </div>
+    </S.Container>
+  )
+}
 
 export default Header

@@ -7,6 +7,11 @@ export const Cores = {
   rosa: '#FFEBD9'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const EstiloGlobal = createGlobalStyle`
   * {
     margin: 0;

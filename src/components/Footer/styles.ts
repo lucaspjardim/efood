@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { breakpoints, Cores } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
@@ -35,4 +35,8 @@ export const Copy = styled.p`
   width: 480px;
 
   color: ${Cores.salmao};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 320px;
+  }
 `

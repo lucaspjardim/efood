@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import fundo from '../../assets/images/fundo.png'
-import { Cores } from '../../styles'
+import { breakpoints, Cores } from '../../styles'
 
 export const Banner = styled.div`
   display: flex;
@@ -13,6 +13,10 @@ export const Banner = styled.div`
 
   background-image: url(${fundo});
   background-size: cover;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 100%;
+  }
 `
 
 export const H1 = styled.h1`
@@ -24,4 +28,8 @@ export const H1 = styled.h1`
   font-size: 36px;
 
   color: ${Cores.salmao};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 359px;
+  ]}
 `

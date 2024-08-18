@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { PlatesListContainer } from './styles'
 import Modal from '../Modal'
-import Plates from '../Plates'
+import Plate from '../Plates'
+import { PlatesListContainer } from './styles'
 
 type Props = {
   plates: [
@@ -37,11 +37,13 @@ const PlatesList = ({ plates }: Props) => {
     visivel: false
   })
 
+  const [plate, setPlate] = useState({})
+
   return (
     <>
       <PlatesListContainer className="container">
         {plates.map((plate) => (
-          <Plates
+          <Plate
             key={plate.id}
             id={plate.id}
             descricao={plate.descricao}
@@ -59,6 +61,7 @@ const PlatesList = ({ plates }: Props) => {
                 preco: plate.preco,
                 visivel: true
               })
+              setPlate(plate)
             }}
           />
         ))}
@@ -73,6 +76,7 @@ const PlatesList = ({ plates }: Props) => {
         key={modal.id}
         visivel={modal.visivel}
         setModal={setModal}
+        plate={plate}
       />
     </>
   )

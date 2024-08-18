@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { breakpoints, Cores } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +13,14 @@ export const Container = styled.div`
 
   background-color: ${Cores.salmao};
   color: ${Cores.bege};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-left: 24px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-left: 0;
+  }
 
   img {
     width: 304px;

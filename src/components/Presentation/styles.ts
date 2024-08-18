@@ -1,16 +1,17 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { breakpoints, Cores } from '../../styles'
 
 type Props = {
   imagem: string
 }
 
 export const ItalianBanner = styled.div<Props>`
-  position: relative; /* Adicionado para posicionamento correto */
+  position: relative;
   height: 280px;
   font-size: 32px;
   margin-bottom: 80px;
   font-weight: 900;
+
   background-image: url(${(props) => props.imagem});
   background-size: cover;
   background-position: center; /* Ajustado para centralizar a imagem */
@@ -26,7 +27,11 @@ export const ItalianBanner = styled.div<Props>`
     z-index: 1;
   }
 
-  .container {
+  @media (max-width: ${breakpoints.desktop}) {
+    padding: 24px;
+  }
+
+  div {
     position: relative; /* Adicionado para posicionamento correto */
     z-index: 2; /* Garantir que o conteúdo esteja acima da overlay */
     display: flex;
@@ -36,6 +41,10 @@ export const ItalianBanner = styled.div<Props>`
     text-align: start;
     height: 100%;
     padding: 20px; /* Adicionado para espaçamento interno */
+    color: ${Cores.branco};
+
+    height: 100%;
+
     color: ${Cores.branco};
   }
 
