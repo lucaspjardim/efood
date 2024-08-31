@@ -1,4 +1,4 @@
-import { Container, Button } from './styles'
+import * as S from './styles'
 
 type Props = {
   id: number
@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Plates = ({ foto, nome, descricao, onclick }: Props) => {
-  const returnDescription = (descricao: string) => {
+  const retornaDescricaoPrato = (descricao: string) => {
     if (descricao.length > 123) {
       return descricao.slice(0, 120) + '...'
     }
@@ -19,12 +19,12 @@ const Plates = ({ foto, nome, descricao, onclick }: Props) => {
 
   return (
     <>
-      <Container>
+      <S.Container>
         <img src={foto} alt={nome} />
         <h2>{nome}</h2>
-        <p>{returnDescription(descricao)}</p>
-        <Button onClick={onclick}>Mais detalhes</Button>
-      </Container>
+        <p>{retornaDescricaoPrato(descricao)}</p>
+        <S.Button onClick={onclick}>Mais detalhes</S.Button>
+      </S.Container>
     </>
   )
 }

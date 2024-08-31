@@ -1,4 +1,5 @@
 import Banner from '../../components/Banner'
+import ClockSpinner from '../../components/Loader'
 
 import RestaurantList from '../../components/RestaurantList'
 import { useGetRestaurantsQuery } from '../../services/api'
@@ -36,7 +37,12 @@ const Home = () => {
     )
   }
 
-  return <h4>Carregando...</h4>
+  return (
+    <>
+      <Banner />
+      <ClockSpinner />
+    </>
+  )
 }
 
 export default Home

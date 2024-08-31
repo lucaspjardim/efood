@@ -1,6 +1,8 @@
 import { useState } from 'react'
+
 import Modal from '../Modal'
 import Plate from '../Plates'
+
 import { PlatesListContainer } from './styles'
 
 type Props = {
@@ -26,6 +28,15 @@ export interface modalType {
   visivel: boolean
 }
 
+type plateProps = {
+  descricao: string
+  foto: string
+  id: number
+  nome: string
+  porcao: string
+  preco: number
+}
+
 const PlatesList = ({ plates }: Props) => {
   const [modal, setModal] = useState<modalType>({
     id: 0,
@@ -37,7 +48,14 @@ const PlatesList = ({ plates }: Props) => {
     visivel: false
   })
 
-  const [plate, setPlate] = useState({})
+  const [plate, setPlate] = useState<plateProps>({
+    descricao: '',
+    foto: '',
+    id: 0,
+    nome: '',
+    porcao: '',
+    preco: 0
+  })
 
   return (
     <>
@@ -76,7 +94,14 @@ const PlatesList = ({ plates }: Props) => {
         key={modal.id}
         visivel={modal.visivel}
         setModal={setModal}
-        plate={plate}
+        plate={{
+          descricao: plate.descricao,
+          foto: plate.foto,
+          id: plate.id,
+          nome: plate.nome,
+          porcao: plate.porcao,
+          preco: plate.preco
+        }}
       />
     </>
   )

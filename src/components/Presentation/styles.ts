@@ -33,7 +33,7 @@ export const ItalianBanner = styled.div<Props>`
 
   div {
     position: relative; /* Adicionado para posicionamento correto */
-    z-index: 2; /* Garantir que o conteúdo esteja acima da overlay */
+    z-index: 3; /* Garantir que o conteúdo esteja acima da overlay */
     display: flex;
     flex-direction: column;
     align-items: flex-start;

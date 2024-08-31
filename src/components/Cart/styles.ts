@@ -6,40 +6,15 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 3;
   width: 100%;
   height: 100%;
 
   display: none;
   justify-content: flex-end;
 
-  &.is-open {
+  &.cart-is-open {
     display: flex;
-  }
-`
-
-export const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.7;
-  width: 100%;
-  height: 100%;
-
-  background-color: #000;
-`
-
-export const Aside = styled.aside`
-  max-width: 360px;
-  padding: 32px 8px;
-
-  width: 100%;
-  z-index: 1;
-
-  background-color: ${Cores.salmao};
-
-  @media (max-width: ${breakpoints.tablet}) {
-    width: 300px;
   }
 `
 
@@ -93,6 +68,57 @@ export const CartItem = styled.li`
     background-color: transparent;
   }
 `
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000;
+`
+
+export const Aside = styled.aside`
+  max-width: 360px;
+  padding: 32px 8px;
+
+  width: 100%;
+  z-index: 1;
+
+  background-color: ${Cores.salmao};
+
+  .message-cart-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .message-cart {
+    font-size: 16px;
+    color: ${Cores.bege};
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 300px;
+  }
+`
+
+export const Preco = styled.h3`
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 40px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 700;
+
+  color: ${Cores.bege};
+`
 
 export const Button = styled.button`
   width: 100%;
@@ -106,15 +132,4 @@ export const Button = styled.button`
 
   border: none;
   cursor: pointer;
-`
-export const Preco = styled.h3`
-  display: flex;
-  justify-content: space-between;
-
-  margin-top: 40px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 700;
-
-  color: ${Cores.bege};
 `

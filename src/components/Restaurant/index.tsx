@@ -1,6 +1,6 @@
 import * as S from './styles'
 
-import Estrela from '../../assets/images/estrela.png'
+import Star from '../../assets/images/estrela.png'
 
 type Props = {
   id: number
@@ -36,7 +36,7 @@ const Restaurant = ({
         <h2>{nome}</h2>
         <span>
           {nota}
-          <img src={Estrela} alt="Nota do restaurante" />
+          <img src={Star} alt="Nota do restaurante" />
         </span>
       </S.Title>
       <S.Info>{retornaInfoRestaurante(info)}</S.Info>

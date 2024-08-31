@@ -1,10 +1,13 @@
 import { BrowserRouter } from 'react-router-dom'
-import Rotas from './routes'
-import { EstiloGlobal } from './styles'
-import Footer from './components/Footer'
 import { Provider } from 'react-redux'
+import Footer from './components/Footer'
 import { store } from './store'
+
+import Rotas from './routes'
+import Checkout from './components/Checkout'
 import Cart from './components/Cart'
+import { EstiloGlobal } from './styles'
+import Payment from './components/Payment'
 
 function App() {
   return (
@@ -14,6 +17,8 @@ function App() {
         <Rotas />
         <Footer />
         <Cart />
+        <Checkout />
+        <Payment />
       </BrowserRouter>
     </Provider>
   )
